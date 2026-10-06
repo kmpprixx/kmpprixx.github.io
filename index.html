@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTRI STUDIO | Official Website & Privacy Policy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0b0f17;
+            --bg-card: #151c28;
+            --bg-card-hover: #1e2738;
+            --accent-color: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.25);
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border-color: #263346;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(11, 15, 23, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 140px 24px 80px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #0b0f17;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 20px var(--accent-glow);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(56, 189, 248, 0.4);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
+        /* Policy Card */
+        .policy-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .policy-header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .policy-header h2 {
+            font-size: 1.8rem;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .policy-meta {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .policy-content h3 {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #1f293d;
+        }
+
+        .policy-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .policy-content ul {
+            margin-bottom: 16px;
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .policy-content li {
+            margin-bottom: 6px;
+        }
+
+        .callout-box {
+            background: rgba(56, 189, 248, 0.05);
+            border-left: 4px solid var(--accent-color);
+            padding: 16px 20px;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            color: #e2e8f0;
+        }
+
+        .warning-box {
+            background: rgba(239, 68, 68, 0.05);
+            border-left: 4px solid #ef4444;
+            padding: 16px 20px;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-size: 0.88rem;
+            color: #fca5a5;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            padding: 30px 24px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            background: #080b11;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .policy-card { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">ARTRI <span>STUDIO</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="about">
+        <h1>ARTRI STUDIO</h1>
+        <p>Crafting high-performance mobile gaming experiences. Built with passion, protected with industry-standard security and privacy.</p>
+        <a href="#privacy" class="btn">View Privacy Policy</a>
+    </section>
+
+    <div class="container" id="privacy">
+        <div class="policy-card">
+            <div class="policy-header">
+                <h2>Privacy Policy & Terms of Use</h2>
+                <div class="policy-meta">Effective Date: August 28, 2026 | Publisher: ARTRI STUDIO</div>
+            </div>
+
+            <div class="policy-content">
+                <p>This Privacy Policy and Terms of Use ("Agreement") governs your access to and use of all mobile games, software applications, and associated services (collectively, the "Games" or "Services") owned and operated by <strong>ARTRI STUDIO</strong> ("Developer," "we," "us," or "our"). By downloading, installing, accessing, or playing any of our Games, you agree to the terms outlined herein.</p>
+
+                <h3>1. Information We Collect</h3>
+                <p>We collect the minimum amount of technical data required to operate, maintain, and secure our Games:</p>
+                <ul>
+                    <li><strong>Automated Diagnostics & Device Technical Data:</strong> Operating system version, hardware specifications, unique device identifiers (such as Android Advertising ID), IP address, system telemetry, and crash logs.</li>
+                    <li><strong>Gameplay & Session Activity:</strong> In-game progression, performance metrics, high scores, control response telemetry, session duration, and feature interaction.</li>
+                    <li><strong>User Communications:</strong> Email address and support message context if you voluntarily contact us for technical assistance or feedback.</li>
+                </ul>
+
+                <h3>2. How Data Is Utilized</h3>
+                <p>Data collected is processed solely for legitimate operational purposes, including providing and enhancing gameplay functionality, diagnosing system crashes, optimizing game balance, mitigating abuse or cheating, and maintaining compliance with Google Play Developer Policies.</p>
+
+                <h3>3. Third-Party Services & Integrations</h3>
+                <p>Our Games may incorporate third-party Software Development Kits (SDKs) and platform services (such as <strong>Google Play Services</strong> and <strong>Google Play Crashlytics</strong>) to facilitate cloud saves, leaderboards, and system stability monitoring. Third-party providers process data under their own independent privacy policies.</p>
+
+                <h3>4. Limitation of Liability & Disclaimer of Warranties</h3>
+                <div class="warning-box">
+                    <strong>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW:</strong><br><br>
+                    THE GAMES AND SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, OR NON-INFRINGEMENT.<br><br>
+                    IN NO EVENT SHALL ARTRI STUDIO, ITS AFFILIATES, OR SUPPLIERS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR IN CONNECTION WITH YOUR ACCESS TO, USE OF, OR INABILITY TO USE THE GAMES. THIS INCLUDES BUT IS NOT LIMITED TO LOSS OF DATA, DEVICE MALFUNCTION, LOSS OF GAME PROGRESSION, LOSS OF VIRTUAL ASSET DATA, OR SYSTEM INTERRUPTIONS, REGARDLESS OF THE THEORY OF LIABILITY (CONTRACT, TORT, OR OTHERWISE), EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+                </div>
+
+                <h3>5. Assumption of Risk</h3>
+                <p>You expressly acknowledge and agree that your download, installation, and use of the Games are at your sole risk. ARTRI STUDIO does not guarantee that the Games will be uninterrupted, error-free, secure, or free from harmful components. Game features, content, mechanics, and availability are subject to modification, rebalancing, or permanent suspension at any time without prior notice or liability.</p>
+
+                <h3>6. Children's Privacy (COPPA & GDPR Compliance)</h3>
+                <p>Our Games are designed for general audiences and are not directed at children under the age of 13 (or 16 in applicable jurisdictions). We do not knowingly collect personal identifiable information from children. If you believe we have inadvertently collected data from a child, contact us immediately for prompt deletion.</p>
+
+                <h3>7. Data Rights & Deletion Requests</h3>
+                <p>You maintain the right to opt out of personalized tracking at any time by adjusting your device settings (<em>Settings &gt; Privacy &gt; Ads</em>).</p>
+
+                <div class="callout-box" id="contact">
+                    <strong>Official Data Deletion Channel:</strong><br>
+                    To request the deletion of any personal data or support records associated with you, please email us with the subject line <code>Data Deletion Request - [Game Name]</code>.
+                </div>
+
+                <h3>8. Contact Information</h3>
+                <p>For questions or formal legal inquiries regarding this Privacy Policy and Liability Terms, contact:</p>
+                <ul>
+                    <li><strong>Studio Entity:</strong> ARTRI STUDIO</li>
+                    <li><strong>Official Support Email:</strong> support@artristudio.com</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 ARTRI STUDIO. All rights reserved.
+    </footer>
+
+</body>
+</html>
